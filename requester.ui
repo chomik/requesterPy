@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>requester</class>
+ <widget class="QMainWindow" name="requester">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>requester</string>
+  </property>
+  <widget class="QWidget" name="container">
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>621</width>
+      <height>251</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>REQUEST</string>
+    </property>
+    <widget class="QComboBox" name="method">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>110</y>
+       <width>101</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <item>
+      <property name="text">
+       <string>HEAD</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>GET</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>POST</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>PUT</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>DELETE</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>TRACE</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>OPTIONS</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>CONNECT</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>PATCH</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLineEdit" name="params">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>20</y>
+       <width>511</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>{}</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="port">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>80</y>
+       <width>49</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="maximum">
+      <number>9999</number>
+     </property>
+     <property name="value">
+      <number>80</number>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="send">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>110</y>
+       <width>221</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>send request</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>headers dict</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="host">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>80</y>
+       <width>111</width>
+       <height>25</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>params dict</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>110</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>method</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>80</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>port</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>80</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>host</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="headers">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>50</y>
+       <width>511</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>{}</string>
+     </property>
+    </widget>
+    <widget class="QPlainTextEdit" name="request">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>150</y>
+       <width>601</width>
+       <height>101</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="path">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>80</y>
+       <width>291</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>/</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_8">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>80</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>path</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="clear_messages">
+     <property name="geometry">
+      <rect>
+       <x>420</x>
+       <y>110</y>
+       <width>191</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>clear messages</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>270</y>
+      <width>621</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>RESPONSE</string>
+    </property>
+    <widget class="QPlainTextEdit" name="response">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>601</width>
+       <height>171</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </widget>
+   <zorder>groupBox_2</zorder>
+   <zorder>groupBox</zorder>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>params</tabstop>
+  <tabstop>headers</tabstop>
+  <tabstop>host</tabstop>
+  <tabstop>port</tabstop>
+  <tabstop>path</tabstop>
+  <tabstop>method</tabstop>
+  <tabstop>send</tabstop>
+  <tabstop>clear_messages</tabstop>
+  <tabstop>request</tabstop>
+  <tabstop>response</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>clear_messages</sender>
+   <signal>clicked()</signal>
+   <receiver>request</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>525</x>
+     <y>133</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>320</x>
+     <y>210</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>clear_messages</sender>
+   <signal>clicked()</signal>
+   <receiver>response</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>525</x>
+     <y>133</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>320</x>
+     <y>375</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
